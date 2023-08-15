@@ -1,5 +1,5 @@
 import Button from "../Button";
-import "./header.css";
+import styles from "./index.module.scss";
 
 type User = {
   name: string;
@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
-    <div className="storybook-header">
+    <div className={styles["storybook-header"]}>
       <div>
         <svg
           width="32"

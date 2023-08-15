@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     outDir: 'lib',
     target: 'es2015',
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     cssTarget: 'chrome61',
     lib: {
       formats: ['es'],
@@ -26,7 +26,10 @@ export default defineConfig({
         ...COMPONENTS_INPUT,
       },
       name: 'feer-ui',
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      fileName: (format, entryName) => {
+        console.log(`${entryName}.${format}.js`)
+        return `${entryName}.${format}.js`
+      },
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

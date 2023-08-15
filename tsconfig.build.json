@@ -12,7 +12,7 @@
     "rootDir": "src/components",
   },
   "include": [
-    "src/components",
+    "src/components/**/index.tsx",
     "src/typings.d.ts"
   ],
   "exclude": [
