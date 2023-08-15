@@ -1,11 +1,13 @@
+# 说明
+
+对于组件库来说，不要将 css 写入 js，否则会造成频繁的引入，导致 css 样式指数增长，所以这里我们将 css 样式打包进一个 css 文件，全局引用一次即可
 
 - eslint done
 - ts类型要在打包后的目录中 done
 - 基础结构完成 done
-- gitcommit规范
+- gitcommit 规范
 - husky
-- css样式分割
-- 
+- css 样式抽离打包完成
 
 
 

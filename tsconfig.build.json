@@ -9,13 +9,14 @@
     "emitDeclarationOnly": true,
     // 从项目中的 TypeScript 和 JavaScript 文件生成 .d.ts 文件。
     "declaration": true,
-    "rootDir": "src/components",
+    // "rootDir": "src/components",
   },
   "include": [
-    "src/components/**/index.tsx",
+    "src/components",
     "src/typings.d.ts"
   ],
   "exclude": [
-    "src/stories/*"
+    "src/stories/*",
+    "src/components/**/__stories__/*",
   ]
 }

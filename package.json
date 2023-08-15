@@ -2,7 +2,6 @@
   "name": "feer-react-ui-core",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "files": [
     "lib"
   ],
@@ -11,8 +10,8 @@
       "import": "./lib/index.es.js",
       "types": "./lib/index.d.ts"
     },
-    "./style": {
-      "import": "./lib/index.css"
+    "./@styles": {
+      "import": "./lib/style.css"
     }
   },
   "main": "./lib/main.es.js",
@@ -24,7 +23,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "tsc": "tsc -p ./tsconfig.build.json"
+    "tsc": "tsc -p ./tsconfig.build.json",
+    "prepare": "husky install",
+    "git": "git add . && git cz && git push"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.2.2",
@@ -40,10 +41,13 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.0",
     "sass": "^1.65.1",
     "storybook": "^7.2.2",
     "typescript": "^5.0.2",
@@ -52,5 +56,10 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
