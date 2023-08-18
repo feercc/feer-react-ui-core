@@ -9,9 +9,9 @@ npm version
 - eslint done
 - ts类型要在打包后的目录中 done
 - 基础结构完成 done
-- gitcommit 规范
-- husky
-- css 样式抽离打包完成
+- gitcommit 规范 done
+- husky 规范 done
+- css 样式抽离打包完成 done
 
 
 
