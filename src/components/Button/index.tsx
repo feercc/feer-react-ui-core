@@ -1,24 +1,25 @@
+import { ReactNode } from "react";
 import styles from "./index.module.scss";
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * 是否是主要按钮，主要按钮添加背景颜色
    */
   primary?: boolean;
   /**
-   * What background color to use
+   * 背景颜色
    */
   backgroundColor?: string;
   /**
-   * How large should the button be?
+   * 大小
    */
   size?: "small" | "medium" | "large";
   /**
-   * Button contents
+   * Button内容
    */
-  label: string;
+  children?: ReactNode;
   /**
-   * Optional click handler
+   * 点击事件
    */
   onClick?: () => void;
 }
@@ -30,22 +31,20 @@ const Button = ({
   primary = false,
   size = "medium",
   backgroundColor,
-  label,
+  children,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  const mode = primary ? "feer-button--primary" : "feer-button--secondary";
   return (
     <button
       type="button"
-      className={`${styles["storybook-button"]} ${
-        styles[`storybook-button--${size}`]
-      } ${styles[mode]}`}
+      className={`${styles["feer-button"]} ${styles[`feer-button--${size}`]} ${
+        styles[mode]
+      }`}
       style={{ backgroundColor }}
       {...props}
     >
-      {label}
+      {children}
     </button>
   );
 };
